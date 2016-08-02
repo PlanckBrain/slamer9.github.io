@@ -50,10 +50,19 @@ button:hover {
 }
 
 #styleSelector {
-	background-color: tan;
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
-	
-	
+}
+
+.White #styleSelector {
+	background-color: var(--lightBlue);
+}
+
+.Blue #styleSelector {
+	background-color: tan;
+}
+
+.Tan #styleSelector {
+	background-color: rbg(170, 244, 255);
 }
