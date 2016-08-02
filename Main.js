@@ -20,7 +20,7 @@ $(document).ready(function()
     
     BlueButton.on('click', function(){
         docBody.removeClass();
-        docBody.addClass("LBlue");
+        docBody.addClass("Blue");
     });
     
     tanButton.on('click', function() {
