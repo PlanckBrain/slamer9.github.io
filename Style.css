@@ -20,11 +20,11 @@ button:hover {
 }
 
 .White a:visited {
-	color: green;
+	color: var(--lightBlue);
 }
 
 .Tan a:visited {
-	color: coral;
+	color: var(--lightBlue);
 }
 
 .Dark a:link {
