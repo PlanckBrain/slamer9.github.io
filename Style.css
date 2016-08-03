@@ -15,27 +15,28 @@ h2 {
 	text-decoration: underline;
 }
 
-/*.White a:link {
-	color: blue;
-}
-
-FOR SOME REASON ALL LINKS APPEAR TO BE ALREADY VISITED
-*/
-
 button:hover {
 	background-color: rgb(211,211,211);
 }
 
-.White a:visited{
+.White a:visited {
 	color: green;
 }
 
-.Tan a:visited{
-	color: blue;
+.Tan a:visited {
+	color: coral;
+}
+
+.Dark a:link {
+	color: var(--lightBlue);
+}
+
+.Dark a:visited {
+	color: green;
 }
 
 .White {
-	background-color: white;
+	background-color: blanchedalmond;
 	color: black;
 }
 
@@ -49,7 +50,14 @@ button:hover {
 	color: black;
 }
 
+.Dark {
+	background: rgb(40, 40, 40) url(images/dark_embroidery.png);
+	color: coral;
+}
+
 #styleSelector {
+	float: right;
+	width: 50%;
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
@@ -65,4 +73,9 @@ button:hover {
 
 .Tan #styleSelector {
 	background-color: rgb(170, 244, 255);
+}
+
+.Dark #styleSelector{
+	background-color: rgb(135, 178, 147);
+	color: black;
 }

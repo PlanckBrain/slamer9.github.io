@@ -1,24 +1,26 @@
 // JavaScript File
 
 //Global variables declaration
-var whiteButton;
-var BlueButton;
+var lightButton;
+var blueButton;
 var tanButton;
+var darkButton;
 var docBody;
 
 $(document).ready(function() 
 {
-    whiteButton = $("#WButton");
-    BlueButton = $("#BButton");
+    lightButton = $("#LButton");
+    blueButton = $("#BButton");
     tanButton = $("#TanButton");
+    darkButton = $("#DarkButton");
     docBody =  $(document.body);
     
-    whiteButton.on('click', function(){
+    lightButton.on('click', function(){
         docBody.removeClass();
         docBody.addClass("White");
     });
     
-    BlueButton.on('click', function(){
+    blueButton.on('click', function(){
         docBody.removeClass();
         docBody.addClass("Blue");
     });
@@ -27,5 +29,10 @@ $(document).ready(function()
        docBody.removeClass();
        docBody.addClass("Tan");
     });
+    
+    darkButton.on('click', function() {
+        docBody.removeClass();
+        docBody.addClass("Dark");
+    })
 });
 
