@@ -17,7 +17,7 @@ $(document).ready(function()
     
     lightButton.on('click', function(){
         docBody.removeClass();
-        docBody.addClass("White");
+        docBody.addClass("Light");
     });
     
     blueButton.on('click', function(){

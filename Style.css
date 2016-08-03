@@ -19,41 +19,45 @@ button:hover {
 	background-color: rgb(211,211,211);
 }
 
-.White a:visited {
-	color: var(--lightBlue);
-}
 
-.Tan a:visited {
-	color: var(--lightBlue);
-}
-
-.Dark a:link {
-	color: var(--lightBlue);
-}
-
-.Dark a:visited {
-	color: green;
-}
-
-.White {
+.Light {
 	background-color: blanchedalmond;
 	color: black;
 }
+
+	.Light a:visited {
+		color: var(--lightBlue);
+	}
+
 
 .Blue {
 	background-color: var(--myBlue);
 	color: black;
 }
 
+
 .Tan {
 	background-color: tan;
 	color: black;
 }
 
+	.Tan a:visited {
+	color: var(--lightBlue);
+	}
+
+
 .Dark {
 	background: rgb(40, 40, 40) url(images/dark_embroidery.png);
 	color: coral;
 }
+
+	.Dark a:link {
+		color: var(--lightBlue);
+	}
+	
+	.Dark a:visited {
+		color: green;
+	}
 
 #styleSelector {
 	float: right;
@@ -63,19 +67,19 @@ button:hover {
 	border-color: black;
 }
 
-.White #styleSelector {
-	background-color: rgb(83, 178, 178);
-}
-
-.Blue #styleSelector {
-	background-color: tan;
-}
-
-.Tan #styleSelector {
-	background-color: rgb(170, 244, 255);
-}
-
-.Dark #styleSelector{
-	background-color: rgb(135, 178, 147);
-	color: black;
-}
+	.Light #styleSelector {
+		background-color: rgb(83, 178, 178);
+	}
+	
+	.Blue #styleSelector {
+		background-color: tan;
+	}
+	
+	.Tan #styleSelector {
+		background-color: rgb(170, 244, 255);
+	}
+	
+	.Dark #styleSelector{
+		background-color: rgb(135, 178, 147);
+		color: black;
+	}
