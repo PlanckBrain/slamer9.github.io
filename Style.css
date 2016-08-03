@@ -15,6 +15,15 @@ h2 {
 	text-decoration: underline;
 }
 
+.hide {
+	display: none;
+}
+
+.visible {
+	visibility: visible;
+	display: initial;
+}
+
 button:hover {
 	background-color: rgb(211,211,211);
 }
@@ -94,11 +103,8 @@ button:hover {
 	border-color: black;
 }
 
-.hide {
-	display: none;
-}
-
-.visible {
-	visibility: visible;
-	display: initial;
+#largerText {
+	font-size: 18px;
+	margin-bottom: 11px;
+	margin-left: 10px;
 }
