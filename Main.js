@@ -6,6 +6,9 @@ var blueButton;
 var tanButton;
 var darkButton;
 var docBody;
+var homeButton;
+var portfolioButton;
+var resumeButton;
 
 $(document).ready(function() 
 {
@@ -13,6 +16,11 @@ $(document).ready(function()
     blueButton = $("#BButton");
     tanButton = $("#TanButton");
     darkButton = $("#DarkButton");
+    
+    homeButton = $("#HButton");
+    portfolioButton = $("#PButton");
+    resumeButton = $("RButton");
+    
     docBody =  $(document.body);
     
     lightButton.on('click', function(){
@@ -53,6 +61,24 @@ $(document).ready(function()
         blueButton.removeClass();
         tanButton.removeClass();
         darkButton.addClass("Selected");
-    })
-});
+    });
+    
+    homeButton.on('click', function() {
+        portfolioButton.removeClass();
+        resumeButton.removeClass();
+        homeButton.addClass("Selected");
+    });
+    
+    portfolioButton.on('click', function() {
+        homeButton.removeClass();
+        resumeButton.removeClass();
+        portfolioButton.addClass("Selected");
+    });
+    
+    resumeButton.on('click', function() {
+        homeButton.removeClass();
+        portfolioButton.removeClass();
+        resumeButton.addClass("Selected");
+    });
+}); //End doc.ready function
 
