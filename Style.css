@@ -5,6 +5,7 @@
 	--marksgreen: rgb(40,180,0);
 	--greyButton: rgb(180, 180, 180);
 	--lessGreyButton: rgb(205, 205, 205);
+	--testYellow: rgb(230,221,147);
 }
 
 body{
@@ -29,6 +30,7 @@ h2 {
 button:hover, .Selected {
 	background-color: var(--greyButton);
 	border-color: var(--lessGreyButton);
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
 }
 
 
@@ -113,4 +115,8 @@ button:hover, .Selected {
 	border-top-left-radius: 12px;
 	border-top-right-radius: 5px;
 	border-bottom-style: none;
+}
+
+#currentPage {
+	background-color: ;
 }
