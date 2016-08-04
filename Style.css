@@ -3,6 +3,8 @@
 	--lightBlue: rgb(0,138,230);
 	--lightCyan: rgb(224,255,255);
 	--marksgreen: rgb(40,180,0);
+	--greyButton: rgb(190, 190, 190);
+	--lessGreyButton: rgb(211, 211, 211);
 }
 
 body{
@@ -24,12 +26,14 @@ h2 {
 	display: initial;
 }
 
-button:hover {
-	background-color: rgb(211,211,211);
+button:hover, .Selected {
+	background-color: var(--greyButton);
+	border-color: var(--lessGreyButton);
 }
-	.Selected{
-		background-color: rgb(211,211,211);
-	}
+	/*.Selected{
+		background-color: var(--greyButton);
+		border-color: ;
+	}*/
 
 
 .Light {
@@ -112,4 +116,5 @@ button:hover {
 #HButton, #PButton, #RButton {
 	border-top-left-radius: 12px;
 	border-top-right-radius: 5px;
+	border-bottom-style: none;
 }
