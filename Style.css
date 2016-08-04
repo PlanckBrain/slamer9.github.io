@@ -108,3 +108,8 @@ button:hover {
 	margin-bottom: 11px;
 	margin-left: 10px;
 }
+
+#HButton, #PButton, #RButton {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 5px;
+}

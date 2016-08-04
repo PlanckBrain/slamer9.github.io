@@ -19,7 +19,7 @@ $(document).ready(function()
     
     homeButton = $("#HButton");
     portfolioButton = $("#PButton");
-    resumeButton = $("RButton");
+    resumeButton = $("#RButton");
     
     docBody =  $(document.body);
     
@@ -62,6 +62,7 @@ $(document).ready(function()
         tanButton.removeClass();
         darkButton.addClass("Selected");
     });
+    
     
     homeButton.on('click', function() {
         portfolioButton.removeClass();
