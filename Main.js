@@ -1,7 +1,8 @@
 // JavaScript File
 
 //Global constant declaration
-const slideTime = 300;
+const slideTimeMed = 300;
+const slideTimeFast = 200;
 
 //Global variables declaration
 var lightButton;
@@ -28,11 +29,11 @@ function homeStart() {
     {
         $.get('home.html', function(response){
                 home = response;
-                currentPage.html(home).slideDown(slideTime);
+                currentPage.html(home).slideDown(slideTimeFast);
             });
     } else
     {
-    currentPage.html(home).slideDown(slideTime);
+    currentPage.html(home).slideDown(slideTimeMed);
     }
 
 }
@@ -110,11 +111,11 @@ $(document).ready(function()
         {
             $.get('portfolio.html', function(response){
                     portfolio = response;
-                    currentPage.html(portfolio).slideDown(slideTime);
+                    currentPage.html(portfolio).slideDown(slideTimeFast);
                 });
         } else
         {
-        currentPage.html(portfolio).slideDown(slideTime);
+        currentPage.html(portfolio).slideDown(slideTimeMed);
         }
     });
     
@@ -129,11 +130,11 @@ $(document).ready(function()
         {
             $.get('resume.html', function(response){
                     resume = response;
-                    currentPage.html(resume).slideDown(slideTime);
+                    currentPage.html(resume).slideDown(slideTimeFast);
                 });
         } else
         {
-        currentPage.html(resume).slideDown(slideTime);
+        currentPage.html(resume).slideDown(slideTimeMed);
         }
     });
     
