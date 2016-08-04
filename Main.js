@@ -1,5 +1,8 @@
 // JavaScript File
 
+//Global constant declaration
+const slideTime = 300;
+
 //Global variables declaration
 var lightButton;
 var blueButton;
@@ -12,6 +15,27 @@ var resumeButton;
 var home;
 var portfolio;
 var resume;
+var currentPage;
+
+function homeStart() {
+    portfolioButton.removeClass();
+    resumeButton.removeClass();
+    homeButton.addClass("Selected");
+    
+    currentPage.slideUp(0);
+        
+    if(home == null)
+    {
+        $.get('home.html', function(response){
+                home = response;
+                currentPage.html(home).slideDown(slideTime);
+            });
+    } else
+    {
+    currentPage.html(home).slideDown(slideTime);
+    }
+
+}
 
 $(document).ready(function() 
 {
@@ -24,9 +48,11 @@ $(document).ready(function()
     portfolioButton = $("#PButton");
     resumeButton = $("#RButton");
     
-    home = $("#HomeDiv");
-    portfolio = $("#PortfolioDiv");
-    resume = $("#ResumeDiv");
+    //home = $("#HomeDiv");
+    //portfolio = $("#PortfolioDiv");
+    //resume = $("#ResumeDiv");
+    
+    currentPage = $("#currentPage");
     
     docBody =  $(document.body);
     
@@ -71,24 +97,25 @@ $(document).ready(function()
     });
     
     
-    homeButton.on('click', function() {
-        portfolioButton.removeClass();
-        resumeButton.removeClass();
-        homeButton.addClass("Selected");
-        
-        home.removeClass("hide");
-        portfolio.addClass("hide");
-        resume.addClass("hide");
-    });
+    homeButton.on('click', homeStart);
     
     portfolioButton.on('click', function() {
         homeButton.removeClass();
         resumeButton.removeClass();
         portfolioButton.addClass("Selected");
         
-        portfolio.removeClass("hide");
-        home.addClass("hide");
-        resume.addClass("hide");
+        currentPage.slideUp(0);
+        
+        if(portfolio == null)
+        {
+            $.get('portfolio.html', function(response){
+                    portfolio = response;
+                    currentPage.html(portfolio).slideDown(slideTime);
+                });
+        } else
+        {
+        currentPage.html(portfolio).slideDown(slideTime);
+        }
     });
     
     resumeButton.on('click', function() {
@@ -96,9 +123,19 @@ $(document).ready(function()
         portfolioButton.removeClass();
         resumeButton.addClass("Selected");
         
-        resume.removeClass("hide");
-        home.addClass("hide");
-        portfolio.addClass("hide");
+        currentPage.slideUp(0);
+        
+        if(resume == null)
+        {
+            $.get('resume.html', function(response){
+                    resume = response;
+                    currentPage.html(resume).slideDown(slideTime);
+                });
+        } else
+        {
+        currentPage.html(resume).slideDown(slideTime);
+        }
     });
+    
+    homeStart();
 }); //End doc.ready function
-
