@@ -21,19 +21,15 @@ h2 {
 	display: none;
 }
 
-.visible {
+/*.visible {
 	visibility: visible;
 	display: initial;
-}
+}*/
 
 button:hover, .Selected {
 	background-color: var(--greyButton);
 	border-color: var(--lessGreyButton);
 }
-	/*.Selected{
-		background-color: var(--greyButton);
-		border-color: ;
-	}*/
 
 
 .Light {

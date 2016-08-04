@@ -9,6 +9,9 @@ var docBody;
 var homeButton;
 var portfolioButton;
 var resumeButton;
+var home;
+var portfolio;
+var resume;
 
 $(document).ready(function() 
 {
@@ -20,6 +23,10 @@ $(document).ready(function()
     homeButton = $("#HButton");
     portfolioButton = $("#PButton");
     resumeButton = $("#RButton");
+    
+    home = $("#HomeDiv");
+    portfolio = $("#PortfolioDiv");
+    resume = $("#ResumeDiv");
     
     docBody =  $(document.body);
     
@@ -68,18 +75,30 @@ $(document).ready(function()
         portfolioButton.removeClass();
         resumeButton.removeClass();
         homeButton.addClass("Selected");
+        
+        home.removeClass("hide");
+        portfolio.addClass("hide");
+        resume.addClass("hide");
     });
     
     portfolioButton.on('click', function() {
         homeButton.removeClass();
         resumeButton.removeClass();
         portfolioButton.addClass("Selected");
+        
+        portfolio.removeClass("hide");
+        home.addClass("hide");
+        resume.addClass("hide");
     });
     
     resumeButton.on('click', function() {
         homeButton.removeClass();
         portfolioButton.removeClass();
         resumeButton.addClass("Selected");
+        
+        resume.removeClass("hide");
+        home.addClass("hide");
+        portfolio.addClass("hide");
     });
 }); //End doc.ready function
 
