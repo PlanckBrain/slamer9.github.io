@@ -18,7 +18,8 @@ var portfolio;
 var resume;
 var currentPage;
 
-function homeStart() {
+//Function declaration
+function homeTab() {
     portfolioButton.removeClass();
     resumeButton.removeClass();
     homeButton.addClass("Selected");
@@ -35,7 +36,44 @@ function homeStart() {
     {
     currentPage.html(home).slideDown(slideTimeMed);
     }
+}
 
+function portfolioTab() {
+    homeButton.removeClass();
+    resumeButton.removeClass();
+    portfolioButton.addClass("Selected");
+    
+    currentPage.slideUp(0);
+    
+    if(portfolio == null)
+    {
+        $.get('portfolio.html', function(response){
+                portfolio = response;
+                currentPage.html(portfolio).slideDown(slideTimeFast);
+            });
+    } else
+    {
+    currentPage.html(portfolio).slideDown(slideTimeMed);
+    }
+}
+
+function resumeTab() {
+    homeButton.removeClass();
+    portfolioButton.removeClass();
+    resumeButton.addClass("Selected");
+    
+    currentPage.slideUp(0);
+    
+    if(resume == null)
+    {
+        $.get('resume.html', function(response){
+                resume = response;
+                currentPage.html(resume).slideDown(slideTimeFast);
+            });
+    } else
+    {
+    currentPage.html(resume).slideDown(slideTimeMed);
+    }
 }
 
 $(document).ready(function() 
@@ -48,10 +86,6 @@ $(document).ready(function()
     homeButton = $("#HButton");
     portfolioButton = $("#PButton");
     resumeButton = $("#RButton");
-    
-    //home = $("#HomeDiv");
-    //portfolio = $("#PortfolioDiv");
-    //resume = $("#ResumeDiv");
     
     currentPage = $("#currentPage");
     
@@ -97,46 +131,9 @@ $(document).ready(function()
         darkButton.addClass("Selected");
     });
     
+    homeButton.on('click', homeTab);
+    portfolioButton.on('click', portfolioTab);
+    resumeButton.on('click', resumeTab);
     
-    homeButton.on('click', homeStart);
-    
-    portfolioButton.on('click', function() {
-        homeButton.removeClass();
-        resumeButton.removeClass();
-        portfolioButton.addClass("Selected");
-        
-        currentPage.slideUp(0);
-        
-        if(portfolio == null)
-        {
-            $.get('portfolio.html', function(response){
-                    portfolio = response;
-                    currentPage.html(portfolio).slideDown(slideTimeFast);
-                });
-        } else
-        {
-        currentPage.html(portfolio).slideDown(slideTimeMed);
-        }
-    });
-    
-    resumeButton.on('click', function() {
-        homeButton.removeClass();
-        portfolioButton.removeClass();
-        resumeButton.addClass("Selected");
-        
-        currentPage.slideUp(0);
-        
-        if(resume == null)
-        {
-            $.get('resume.html', function(response){
-                    resume = response;
-                    currentPage.html(resume).slideDown(slideTimeFast);
-                });
-        } else
-        {
-        currentPage.html(resume).slideDown(slideTimeMed);
-        }
-    });
-    
-    homeStart();
+    homeTab(); //So it defaults to changing to the home tab when the page loads.
 }); //End doc.ready function
