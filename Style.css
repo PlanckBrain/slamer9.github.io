@@ -6,7 +6,10 @@
 	--greyButton: rgb(180, 180, 180);
 	--lessGreyButton: rgb(205, 205, 205);
 	--testYellow: rgb(230,221,147);
+	
+	--transition: all .2s linear 0s;
 }
+
 
 body{
 	padding: 8px;
@@ -37,6 +40,7 @@ button:hover, .Selected {
 .Light {
 	background-color: blanchedalmond;
 	color: black;
+	transition: var(--transition);
 }
 
 	.Light a:visited {
@@ -47,12 +51,14 @@ button:hover, .Selected {
 .Blue {
 	background-color: var(--myBlue);
 	color: black;
+	transition: var(--transition);
 }
 
 
 .Tan {
 	background-color: tan;
 	color: black;
+	transition: var(--transition);
 }
 
 	.Tan a:visited {
@@ -63,6 +69,7 @@ button:hover, .Selected {
 .Dark {
 	background: rgb(40, 40, 40) url(images/dark_embroidery.png);
 	color: coral;
+	transition: var(--transition);
 }
 
 	.Dark a:link {
@@ -118,5 +125,5 @@ button:hover, .Selected {
 }
 
 #currentPage {
-	background-color: ;
+	/*background-color: ;*/
 }
