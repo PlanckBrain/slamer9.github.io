@@ -10,7 +10,6 @@
 	--transition: all .2s linear 0s;
 }
 
-
 body{
 	padding: 8px;
 	font-weight: bold;
@@ -19,6 +18,10 @@ body{
 h2 {
 	font-size: 23px;
 	text-decoration: underline;
+}
+
+h3 {
+	font-size: 19px;
 }
 
 .hide {
