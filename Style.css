@@ -6,17 +6,9 @@
 	--greyButton: rgb(180, 180, 180);
 	--lessGreyButton: rgb(205, 205, 205);
 	--testYellow: rgb(230,221,147);
-	
 	--transition: all .2s linear 0s;
 }
 
-<<<<<<< HEAD
-=======
-b {
-	font-weight: bold;
-}
-
->>>>>>> 7b1fbf25b832195be1c42ab935e016cebf41a549
 body{
 	padding: 8px;
 	font-weight: bold;
