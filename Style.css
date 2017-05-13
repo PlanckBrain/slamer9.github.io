@@ -81,6 +81,15 @@ button:hover, .Selected {
 	.Dark a:visited {
 		color: green;
 	}
+	
+.LargerText {
+	font-size: 18px;
+	margin-bottom: 13px;
+	margin-left: 10px;
+}
+
+withSquare {list-style-type:square}
+withCircle {list-style-type:circle}
 
 #styleSelector {
 	float: right;
@@ -112,12 +121,6 @@ button:hover, .Selected {
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
-}
-
-#largerText {
-	font-size: 18px;
-	margin-bottom: 13px;
-	margin-left: 10px;
 }
 
 #HButton, #PButton, #RButton {
