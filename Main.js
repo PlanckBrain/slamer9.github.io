@@ -3,6 +3,7 @@
 //Global constant declaration
 const slideTimeMed = 300;
 const slideTimeFast = 200;
+const slideTimeInstant = 0;
 
 //Global variables declaration
 var lightButton;
@@ -18,65 +19,9 @@ var portfolio;
 var resume;
 var currentPage;
 
-//Function declaration
-function homeTab() {
-    portfolioButton.removeClass();
-    resumeButton.removeClass();
-    homeButton.addClass("Selected");
-    
-    currentPage.slideUp(0);
-        
-    if(home == null)
-    {
-        $.get('home.html', function(response){
-                home = response;
-                currentPage.html(home).slideDown(slideTimeFast);
-            });
-    } else
-    {
-    currentPage.html(home).slideDown(slideTimeMed);
-    }
-}
 
-function portfolioTab() {
-    homeButton.removeClass();
-    resumeButton.removeClass();
-    portfolioButton.addClass("Selected");
-    
-    currentPage.slideUp(0);
-    
-    if(portfolio == null)
-    {
-        $.get('portfolio.html', function(response){
-                portfolio = response;
-                currentPage.html(portfolio).slideDown(slideTimeFast);
-            });
-    } else
-    {
-    currentPage.html(portfolio).slideDown(slideTimeMed);
-    }
-}
+$(document).ready(function() //Things to do when document loads.
 
-function resumeTab() {
-    homeButton.removeClass();
-    portfolioButton.removeClass();
-    resumeButton.addClass("Selected");
-    
-    currentPage.slideUp(0);
-    
-    if(resume == null)
-    {
-        $.get('resume.html', function(response){
-                resume = response;
-                currentPage.html(resume).slideDown(slideTimeFast);
-            });
-    } else
-    {
-    currentPage.html(resume).slideDown(slideTimeMed);
-    }
-}
-
-$(document).ready(function() 
 {
     lightButton = $("#LButton");
     blueButton = $("#BButton");
@@ -137,3 +82,64 @@ $(document).ready(function()
     
     homeTab(); //So it defaults to changing to the home tab when the page loads.
 }); //End doc.ready function
+
+
+//Function declaration
+function homeTab() {
+    portfolioButton.removeClass();
+    resumeButton.removeClass();
+    homeButton.addClass("Selected");
+    
+    currentPage.slideUp(slideTimeInstant);
+        
+    if(home == null)
+    {
+        $.get('home.html', function(response){
+                home = response;
+                currentPage.html(home).slideDown(slideTimeFast);
+            });
+    } else
+    {
+    currentPage.html(home).slideDown(slideTimeMed);
+    }
+}
+
+function portfolioTab() {
+    homeButton.removeClass();
+    resumeButton.removeClass();
+    portfolioButton.addClass("Selected");
+    
+    currentPage.slideUp(slideTimeInstant);
+    
+    if(portfolio == null)
+    {
+        $.get('portfolio.html', function(response){
+                portfolio = response;
+                currentPage.html(portfolio).slideDown(slideTimeFast);
+            });
+    } else
+    {
+    currentPage.html(portfolio).slideDown(slideTimeMed);
+    }
+}
+
+function resumeTab() {
+    homeButton.removeClass();
+    portfolioButton.removeClass();
+    resumeButton.addClass("Selected");
+    
+    currentPage.slideUp(slideTimeInstant);
+    
+    if(resume == null)
+    {
+        $.get('resume.html', function(response){
+                resume = response;
+                currentPage.html(resume).slideDown(slideTimeFast);
+            });
+    } else
+    {
+    currentPage.html(resume).slideDown(slideTimeMed);
+    }
+}
+
+
