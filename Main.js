@@ -1,4 +1,4 @@
-// JavaScript File
+// Look at CSS "on hover" and "on click"
 
 //Global constant declaration
 const slideTimeMed = 300;
