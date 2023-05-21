@@ -139,5 +139,3 @@ function resumeTab() {
     currentPage.html(resume).slideDown(slideTimeMed);
     }
 }
-
-
