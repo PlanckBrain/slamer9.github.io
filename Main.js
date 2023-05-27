@@ -1,4 +1,4 @@
-// Look at CSS "on hover" and "on click"
+// TODO Look at CSS "on hover" and "on click"
 
 //Global constant declaration
 const slideTimeMed = 300;
