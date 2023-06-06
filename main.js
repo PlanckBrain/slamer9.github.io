@@ -34,7 +34,8 @@ $(document).ready(function() //Things to do when document loads.
     
     docBody =  $(document.body);
     
-    lightButton.on('click', function(){
+    lightButton.on('click', function()
+    {
         docBody.removeClass();
         docBody.addClass("Light");
         
@@ -44,7 +45,8 @@ $(document).ready(function() //Things to do when document loads.
         darkButton.removeClass();
     });
     
-    blueButton.on('click', function(){
+    blueButton.on('click', function()
+    {
         docBody.removeClass();
         docBody.addClass("Blue");
         
@@ -54,7 +56,8 @@ $(document).ready(function() //Things to do when document loads.
         blueButton.addClass("Selected");
     });
     
-    tanButton.on('click', function() {
+    tanButton.on('click', function()
+    {
        docBody.removeClass();
        docBody.addClass("Tan");
        
@@ -64,7 +67,8 @@ $(document).ready(function() //Things to do when document loads.
         tanButton.addClass("Selected");
     });
     
-    darkButton.on('click', function() {
+    darkButton.on('click', function()
+    {
         docBody.removeClass();
         docBody.addClass("Dark");
         
@@ -83,7 +87,8 @@ $(document).ready(function() //Things to do when document loads.
 
 
 //Function declaration
-function homeTab() {
+function homeTab()
+{
     portfolioButton.removeClass();
     resumeButton.removeClass();
     homeButton.addClass("Selected");
@@ -92,17 +97,20 @@ function homeTab() {
         
     if(home == null)
     {
-        $.get('home.html', function(response){
+        $.get('home.html', function(response)
+            {
                 home = response;
                 currentPage.html(home).slideDown(slideTimeFast);
-            });
+            }
+        );
     } else
     {
     currentPage.html(home).slideDown(slideTimeMed);
     }
 }
 
-function portfolioTab() {
+function portfolioTab()
+{
     homeButton.removeClass();
     resumeButton.removeClass();
     portfolioButton.addClass("Selected");
@@ -111,7 +119,8 @@ function portfolioTab() {
     
     if(portfolio == null)
     {
-        $.get('portfolio.html', function(response){
+        $.get('portfolio.html', function(response)
+            {
                 portfolio = response;
                 currentPage.html(portfolio).slideDown(slideTimeFast);
             });
@@ -121,7 +130,8 @@ function portfolioTab() {
     }
 }
 
-function resumeTab() {
+function resumeTab()
+{
     homeButton.removeClass();
     portfolioButton.removeClass();
     resumeButton.addClass("Selected");
@@ -130,7 +140,8 @@ function resumeTab() {
     
     if(resume == null)
     {
-        $.get('resume.html', function(response){
+        $.get('resume.html', function(response)
+            {
                 resume = response;
                 currentPage.html(resume).slideDown(slideTimeFast);
             });
