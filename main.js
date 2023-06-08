@@ -147,6 +147,6 @@ function resumeTab()
             });
     } else
     {
-    currentPage.html(resume).slideDown(slideTimeMed);
+        currentPage.html(resume).slideDown(slideTimeMed);
     }
 }
