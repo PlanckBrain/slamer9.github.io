@@ -126,7 +126,7 @@ function portfolioTab()
             });
     } else
     {
-    currentPage.html(portfolio).slideDown(slideTimeMed);
+        currentPage.html(portfolio).slideDown(slideTimeMed);
     }
 }
 
