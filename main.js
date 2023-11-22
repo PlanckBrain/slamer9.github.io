@@ -19,6 +19,7 @@ var portfolio;
 var resume;
 var currentPage;
 
+
 $(document).ready(function() //Things to do when document loads.
 {
     lightButton = $("#LButton");
