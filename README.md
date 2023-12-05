@@ -1,2 +1,2 @@
-# slamer9.github.io
+# PanckBrain.github.io
 My static github hosted website.
