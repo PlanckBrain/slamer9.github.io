@@ -84,6 +84,14 @@ $(document).ready(function() //Things to do when document loads.
     resumeButton.on('click', resumeTab);
     
     homeTab(); //So it defaults to changing to the home tab when the page loads.
+
+    docBody.removeClass();
+    docBody.addClass("Light");
+    
+    lightButton.addClass("Selected");
+    blueButton.removeClass();
+    tanButton.removeClass();
+    darkButton.removeClass();
 }); //End doc.ready function
 
 
