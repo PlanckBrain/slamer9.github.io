@@ -117,7 +117,7 @@ withCircle {list-style-type:circle}
 	}
 	
 #tabs {
-	width: 99%;
+	width: 50%;
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
